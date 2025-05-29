@@ -1,4 +1,4 @@
-package com.example.infra.mariadb;
+package com.example.infra.mariadb.user;
 
 import com.example.domain.query.Query;
 import com.example.domain.user.IUserRepository;

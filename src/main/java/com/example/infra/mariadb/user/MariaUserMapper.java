@@ -1,4 +1,4 @@
-package com.example.infra.mariadb;
+package com.example.infra.mariadb.user;
 
 import com.example.domain.user.User;
 import com.example.domain.user.UserId;

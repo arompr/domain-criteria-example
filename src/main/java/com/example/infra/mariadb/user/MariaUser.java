@@ -1,4 +1,4 @@
-package com.example.infra.mariadb;
+package com.example.infra.mariadb.user;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
