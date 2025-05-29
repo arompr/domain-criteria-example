@@ -70,7 +70,16 @@ public class MariaUserRepositoryTest {
     }
 
     @Test
-    void fetch_users_by_name_part() {
+    void fetch_users_by_email_returns_empty_list_when_no_match() {
+        Query query = where(hasEmail("not-" + ALICE_EMAIL));
+
+        List<User> users = repository.fetch(query);
+
+        assertThat(users).isEmpty();
+    }
+
+    @Test
+    void fetch_users_by_email_returns_matching_user() {
         Query query = where(hasEmail(ALICE_EMAIL));
 
         List<User> users = repository.fetch(query);
