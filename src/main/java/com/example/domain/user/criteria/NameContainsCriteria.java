@@ -3,19 +3,19 @@ package com.example.domain.user.criteria;
 import com.example.domain.query.criteria.ICriteria;
 import com.example.domain.query.criteria.ICriteriaVisitor;
 
-public class EmailEqualsCriteria implements ICriteria {
-    private final String email;
+public class NameContainsCriteria implements ICriteria {
+    private final String name;
 
-    private EmailEqualsCriteria(String email) {
-        this.email = email;
+    private NameContainsCriteria(String name) {
+        this.name = name;
     }
 
-    public static EmailEqualsCriteria hasEmail(String email) {
-        return new EmailEqualsCriteria(email);
+    public static NameContainsCriteria hasName(String name) {
+        return new NameContainsCriteria(name);
     }
 
-    public String getEmail() {
-        return email;
+    public String getName() {
+        return name;
     }
 
     @Override

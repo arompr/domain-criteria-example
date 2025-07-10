@@ -20,4 +20,9 @@ public class AndCriteria implements ICriteria {
     public ICriteria getRight() {
         return right;
     }
+
+    @Override
+    public <R> R accept(ICriteriaVisitor<R> criteriaVisitor) {
+        return criteriaVisitor.visit(this);
+    }
 }

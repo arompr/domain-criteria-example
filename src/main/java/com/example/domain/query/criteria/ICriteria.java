@@ -12,4 +12,6 @@ public interface ICriteria {
     default ICriteria not() {
         return new NotCriteria(this);
     }
+
+    <R> R accept(ICriteriaVisitor<R> criteriaVisitor);
 }

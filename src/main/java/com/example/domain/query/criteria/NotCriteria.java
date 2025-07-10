@@ -10,4 +10,9 @@ public class NotCriteria implements ICriteria {
     public ICriteria getCriteria() {
         return this.criteria;
     }
+
+    @Override
+    public <R> R accept(ICriteriaVisitor<R> criteriaVisitor) {
+        return criteriaVisitor.visit(this);
+    }
 }
