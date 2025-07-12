@@ -22,6 +22,8 @@ Query query = where(
         .or(hasEmail("bob@example.com"))
 );
 
+You can see more examples in the repo test class
+
 // Exclude users with Alice's email
 Query query = where(
     hasEmail("alice@example.com").not()
