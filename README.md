@@ -18,8 +18,8 @@ We can also chain the criterias :
 // Find users with Alice's email OR Bob's email
 Query query = where(hasEmail("alice@example.com").or(hasEmail("bob@example.com")));
 
-You can see more examples in the repo test class
-
 // Exclude users with Alice's email
 Query query = where(hasEmail("alice@example.com").not());
 ```
+
+You can see more examples in the repo test class
