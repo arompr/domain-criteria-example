@@ -9,7 +9,6 @@ It was created as an educational example to explore how queries can be expressed
 ```java
 // Find a user with a specific email
 Query query = where(hasEmail("alice@example.com"));
-
 List<User> results = userRepository.fetch(query);
 ```
 
@@ -17,15 +16,10 @@ We can also chain the criterias :
 
 ```java
 // Find users with Alice's email OR Bob's email
-Query query = where(
-    hasEmail("alice@example.com")
-        .or(hasEmail("bob@example.com"))
-);
+Query query = where(hasEmail("alice@example.com").or(hasEmail("bob@example.com")));
 
 You can see more examples in the repo test class
 
 // Exclude users with Alice's email
-Query query = where(
-    hasEmail("alice@example.com").not()
-);
+Query query = where(hasEmail("alice@example.com").not());
 ```
